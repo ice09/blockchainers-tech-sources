@@ -1,0 +1,67 @@
+baseURL: https://blockchainers.tech
+languageCode: en-us
+defaultContentLanguage: en
+title: blockchainers.tech
+theme: cupper-hugo-theme
+enableGitInfo: true
+
+taxonomies:
+  tag: DLT, Blockchain, Ethereum, Tokenization, ERC-20, ERC-721, NFT, Libra, Stellar
+
+permalinks:
+  posts: /:filename/
+
+imaging:
+  quality: 99
+
+params:
+  description: Decentralized Governance. Tech Only.
+  homeMetaContent: The Tech Side of blockchainers.org
+  footer: Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme).
+  dateFormat: Jan 2, 2006
+
+menu:
+  nav:
+    - name: Posts
+      url: /posts/
+      weight: 2
+    - name: Tags
+      url: /tags/
+      weight: 3
+    - name: About
+      url: /about/
+      weight: 4
+    - name: RSS
+      url: /index.xml
+      weight: 5
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xHTML: false
+  highlight:
+    codeFences: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: monokai
+    tabWidth: 4
+  tableOfContents:
+    endLevel: 6
+    startLevel: 2
