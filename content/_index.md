@@ -5,7 +5,6 @@ title: "blockchainers.tech"
 
 Welcome to **blockchainers.tech**: The Tech Side of [blockchainers.org](blockchainers.org).  
 Topics of posts include:
-
 {{< ticks >}}
 * Decentralized Governance: Aragon, MolochDAO, DAOstack
 * Decentralized Identity: ERC-725/735, uPort, 3Box
