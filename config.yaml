@@ -17,7 +17,7 @@ imaging:
 params:
   description: Decentralized Governance. Tech Only.
   homeMetaContent: The Tech Side of blockchainers.org
-  footer: Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme).
+  footer: Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Blog Logo made by [Freepik](https://www.flaticon.com/authors/freepik) from [www.flaticon.com](www.flaticon.com).
   dateFormat: Jan 2, 2006
 
 menu:

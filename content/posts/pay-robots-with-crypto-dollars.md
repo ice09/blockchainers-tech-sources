@@ -4,7 +4,7 @@ date: 2020-05-18T10:05:56+02:00
 draft: false
 ---
 
-TODO: Post is still ncomplete, Images and Diagrams are missing. 
+TODO: Post is still incomplete, Images and Diagrams are missing. 
 
 You have a valuable data source and want to make money with it? You have sensors, cameras or even robots which could earn you money if people could use them, just by calling your API? Or are you a robot or autonomous car and want to pay for something you need - maintenance, fuel or electricity and just noboby wants to open a bank account for you because KYC turns out to be difficult?
 
