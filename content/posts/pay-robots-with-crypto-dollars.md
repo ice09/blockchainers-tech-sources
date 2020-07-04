@@ -1,7 +1,7 @@
 ---
 title: "Pay Robots With Crypto Dollars"
 date: 2020-05-18T10:05:56+02:00
-draft: false
+draft: true
 ---
 
 TODO: Post is still incomplete, Images and Diagrams are missing. 
