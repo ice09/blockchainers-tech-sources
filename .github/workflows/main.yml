@@ -30,4 +30,4 @@ jobs:
           user_name: ice09
           user_email: alexander.culum@web.de
           publish_branch: master
-          cname: blockchainers.tech
+          # cname: blockchainers.tech
