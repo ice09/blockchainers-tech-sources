@@ -85,7 +85,7 @@ With choosing a stablecoin like DAI for the other Token, we are now setting a pr
 <img src="/images/create_pool_supply.png" border=1/>
 <img src="/images/pool_liquidity.png" border=1/>
 
-We added 1000 YST and 10 DAI to the pool, resulting in a price of $0.001 of 1 YST. This price is initially set by us with this pool creation. As someone is either buying YST for DAI or DAI for YST, the supply of one Token is reduced and the price is automatically adjusted.
+We added 1000 YST and 10 DAI to the pool, resulting in a price of $0.01 of 1 YST. This price is initially set by us with this pool creation. As someone is either buying YST for DAI or DAI for YST, the supply of one Token is reduced and the price is automatically adjusted.
 
 ### Join an existing Pool
 
