@@ -1,7 +1,7 @@
 ---
 title: "How I Became a Millionaire for 3 Seconds"
 date: 2020-07-10T10:01:08+02:00
-draft: false
+draft: true
 ---
 
 {{<blockquote author="Doc Brown">}}
