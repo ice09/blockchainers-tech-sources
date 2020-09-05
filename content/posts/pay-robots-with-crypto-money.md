@@ -1,10 +1,12 @@
 ---
-title: "Pay Robots With Crypto Dollars"
+title: "Pay Robots With Crypto Money"
 date: 2020-05-18T10:05:56+02:00
 draft: true
 ---
 
-TODO: Post is still incomplete, Images and Diagrams are missing. 
+{{<blockquote author="T-1000">}}
+I need your clothes, your boots, and your motorcycle.
+{{</blockquote>}}
 
 You have a valuable data source and want to make money with it? You have sensors, cameras or even robots which could earn you money if people could use them, just by calling your API? Or are you a robot or autonomous car and want to pay for something you need - maintenance, fuel or electricity and just noboby wants to open a bank account for you because KYC turns out to be difficult?
 
@@ -60,6 +62,7 @@ For the detailed version, use https://github.com/ice09/crypyapi-demo#chuck-norr
 Next Step: crypyAPI. Crypto Payments for APIs.
 The demo should give you an impression on what is possible. What we actually want to have is this:
 
+```java
 @RestController
 public class PayableAPIEndpoints<T> {
 
@@ -67,6 +70,8 @@ public class PayableAPIEndpoints<T> {
     public byte[] createPicture() {
         return pictureService.create();
     }
+```
+
 So you take your existing Endpoints/REST Controllers, add some annotations (we are in Java/Spring MVC/Spring Boot here) and enjoy earning money. This can run everywhere, on-premise, in a private cloud, in a public cloud. No credentials, no credit cards, no bank accounts, just a plain 32 byte private key storing the money.
 
 Make money from your services, everywhere.
