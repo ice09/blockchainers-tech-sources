@@ -157,7 +157,7 @@ That's it, the transaction will fail if the assertion in the LENDING POOL contra
 
 ### Step-by-Step Borrowing
 
-* Go to https://remix.org and import the [Smart Contract IPFS resource](https://ipfs.io/ipfs/QmRJQJMVC6whKFKEpUR85Dv2Y4grg3bNiPiKJsQpsrZsCi).
+* Go to https://remix.ethereum.org and import the [Smart Contract IPFS resource](https://ipfs.io/ipfs/QmRJQJMVC6whKFKEpUR85Dv2Y4grg3bNiPiKJsQpsrZsCi).
 
 <img src="/images/remix_ipfs.png" border=1/>
 
