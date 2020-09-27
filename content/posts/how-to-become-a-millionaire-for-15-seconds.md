@@ -9,7 +9,7 @@ draft: false
 Granted, that's worst-case scenario. The destruction might in fact be very localized, limited to merely our own galaxy.
 {{</blockquote>}}
 
-If you could start a sequence of actions and - at the very end of it - could just cancel it from the beginning as if nothing ever happened, wouldn't that be cool? And if you can be sure - like law-of-nature sure - that what others do in such an action sequence, you will always be able to cancel what they did if it's not what you wanted - would you then borrow someone $1.000.000 if she either
+If you could start a sequence of actions and - at the very end of it - could just cancel it from the beginning as if nothing ever happened, wouldn't that be cool? And if you can be sure - like law-of-nature sure - that what others do in such an action sequence, you will always be able to cancel if it's not what you wanted - would you then borrow someone $1.000.000 if she either
 * pays you back $1.000.900 at the end?
 * gets reverted all actions that happened in the transaction, including you borrowing her money in the first place?
 
