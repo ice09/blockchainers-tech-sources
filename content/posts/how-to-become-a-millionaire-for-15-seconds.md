@@ -11,7 +11,7 @@ Granted, that's worst-case scenario. The destruction might in fact be very local
 
 If you could start a sequence of actions and - at the very end of it - could just cancel it from the beginning as if nothing ever happened, wouldn't that be cool? And if you can be sure that what others do in such an action sequence will always be cancelled if certain specified criteria, like you getting back the lended money, are not met - would you then lend someone $1.000.000 if she either
 * pays you back $1.000.900 at the end?
-* gets reverted all actions that happened in the transaction, including you borrowing her money in the first place?
+* gets reverted all actions that happened in the transaction, including you lending her money in the first place?
 
 In the strange world of DeFi, some people do exactly this and they are earning riskless money with it. Just for lending money for 15 seconds and getting it back guaranteed, with (almost) no risk (but also low interest).
 
