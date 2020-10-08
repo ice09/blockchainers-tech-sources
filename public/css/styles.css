@@ -549,11 +549,6 @@ main {
     counter-reset: fig;
     min-height: 100vh;
 }
-figcaption::before {
-    counter-increment: fig;
-    content: 'Figure ' counter(fig) ':\0020';
-    font-weight: bold;
-}
 
 /* Code blocks */
 pre[class*=language-] {
