@@ -1,7 +1,7 @@
 ---
 title: "Pay Robots with Crypto Money: Crypto Payable API (xDai edition)"
 date: 2020-10-08
-draft: true
+draft: false
 ---
 
 {{<blockquote author="T-1000">}}
