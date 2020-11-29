@@ -1,6 +1,6 @@
 ---
 title: "How To Become a Millionaire for 15 Seconds"
-date: 2020-07-10T10:01:08+02:00
+date: 2020-07-10
 draft: false
 ---
 
@@ -19,9 +19,14 @@ In the strange world of DeFi, some people do exactly this and they are earning r
 
 Though this sounds so crazy, it is actually just a side effect of decentralized, transactional Smart Contract programming. It is very easy and, with provably immutable blockchains, very secure.
 
+<figure>
 <img src="/images/FlashLoan_2.png" size=200% border=0 />
+<figcaption>Flash Loan transaction call sequence</figcaption>
+</figure>
 
-_Note: This walk-through works for the Ropsten Testnet. Do not just transfer this to the Mainnet, this can have all kind of legal and tax implications when executed with real money!_ 
+{{< warning >}}
+This walk-through works for the Ropsten Testnet. Do not just transfer this to the Mainnet, this can have all kind of legal and tax implications when executed with real money!
+{{< /warning >}}
 
 ## Why so cheap?
 
