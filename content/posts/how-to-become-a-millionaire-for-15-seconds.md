@@ -85,13 +85,17 @@ Choose Ropsten Network in MetaMask before proceeding.
 
 We will need some DAI for the fees, therefore we are going to mint some (thanks Ropsten!).
 
-<img src="/images/MMRopsten.png" border=1 width=50%/>
+<figure>
+    <img src="/images/MMRopsten.png" border=1 width=50%/>
+</figure>
 
 * Go to [Aave](http://test.aave.com)
 * Connect MetaMask Wallet and Account
 * Choose DAI Faucet
 
-<img src="/images/testaave.png" border=1 width=60%/>
+<figure>
+    <img src="/images/testaave.png" border=1 width=60%/>
+</figure>
 
 Check `BalanceLogger` for minted Ropsten DAI in Etherscan:
 * Open Etherscan with [BalanceLogger contract](https://ropsten.etherscan.io/address/0xebc2b6ac8257571a5f7e03bfbe89715e938f43dd#writeContract)
@@ -100,8 +104,12 @@ Check `BalanceLogger` for minted Ropsten DAI in Etherscan:
 * `logBalance` will log the Ropsten DAI balance of the origin account
 * Check that event `HasBalanceOf` has been emitted for 10.000 DAI
 
-<img src="/images/logBalance_es.png" border=1/>
-<img src="/images/hasBalanceOf_es.png" border=1 width=80%/>
+<figure>
+    <img src="/images/logBalance_es.png" border=1/>
+</figure>
+<figure>
+    <img src="/images/hasBalanceOf_es.png" border=1 width=80%/>
+</figure>
 
 We successfully minted 10.000 DAI (Ropsten or MockDAI) and used the `BalanceLogger` to log our balance. We now want to borrow 1.000.000 DAI, transfer it to the original sender account, log the new balance and return the DAI + fees. Obviously, instead of logging the balance, you could do all kind of transactions with the loan, like margin trading, token swapping, etc. 
 
@@ -110,8 +118,12 @@ We successfully minted 10.000 DAI (Ropsten or MockDAI) and used the `BalanceLogg
 * Give the contract permission to transfer DAI on your behalf
   * Approve the contract address at [MockDAI Token Contract](https://ropsten.etherscan.io/address/0xf80A32A835F79D7787E8a8ee5721D0fEaFd78108)
 
-<img src="/images/DAIapproval.png" border=1/>
-<img src="/images/DAIapprovalES.png" border=1/>
+<figure>
+    <img src="/images/DAIapproval.png" border=1/>
+</figure>
+<figure>
+    <img src="/images/DAIapprovalES.png" border=1/>
+</figure>
 
 * As all DAI has to be transfered back to the lending pool, the fees have to be submitted beforehand to the contract
   * Send some DAI to the contract (to pay fees of 0.09%)
@@ -164,28 +176,40 @@ That's it, the transaction will fail if the assertion in the LENDING POOL contra
 
 * Go to https://remix.ethereum.org and import the [Smart Contract IPFS resource](https://ipfs.io/ipfs/QmRJQJMVC6whKFKEpUR85Dv2Y4grg3bNiPiKJsQpsrZsCi).
 
-<img src="/images/remix_ipfs.png" border=1/>
+<figure>
+    <img src="/images/remix_ipfs.png" border=1/>
+</figure>
 
 * Rename the file: add extension _sol_ for Solidity, so Remix recognizes the file.
 
-<img src="/images/remix_rename.png" width=300 border=1/>
+<figure>
+    <img src="/images/remix_rename.png" width=300 border=1/>
+</figure>
 
 * Load the contract from the Ropsten chain. This step will link the sources in the editor to the contract address.
 
-<img src="/images/executeFlashloan.png" border=1/>
+<figure>
+    <img src="/images/executeFlashloan.png" border=1/>
+</figure>
 
 * Execute the `flashloan` function with the amount of DAI you want to borrow (and gave approval in the MockDAI contract for).
   * Customize the gas price (this step might not be necessary, customize only if the transaction fails otherwise).
 
-<img src="/images/editGas.png" border=1/>
-<img src="/images/customizeGas.png" border="1"/>
+<figure>
+    <img src="/images/editGas.png" border=1/>
+</figure>
+<figure>
+    <img src="/images/customizeGas.png" border="1"/>
+</figure>
 
 ### Validating the Transaction
 
 You can easily validate the transaction by connecting with web3js or web3j or any other client you trust, or more easily [in Etherscan](https://ropsten.etherscan.io/tx/0xfa702b7e54bfed224d1ae35b0ba4ddade1160d3026d0c945b2c941c3099d9ffe#eventlog).  
 There will be step 5 which logs the current balance of the `trx.origin` account. As this contract is immutable and deployed to the Ethereum Blockchain, there is no way to fake this log message.
 
-<img src="/images/proof_etherscan.png" border=1>
+<figure>
+    <img src="/images/proof_etherscan.png" border=1>
+</figure>
 
 So for logging out the balance this would be a costly thing to do on the Mainnet. But as you can do everything that fits in the `executeOperation` function, there might be more profitable things to do than logging.
 

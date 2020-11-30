@@ -1,7 +1,7 @@
 ---
 title: "Pay Robots with Crypto Money: Crypto Payable API (xDai edition)"
 date: 2020-10-08
-draft: true
+draft: false
 ---
 
 {{<blockquote author="T-1000">}}
@@ -42,11 +42,10 @@ Creating a wallet has no prerequisites, but it is simplified a lot by Browser pl
 
 <figure>
    <img style="width:350px" border=1 src="/images/nifty.png"/>
-   <figcaption>Install Nifty or MetaMask Wallet for xDai fun.</figcaption>
 </figure>
 
 {{<note>}}
-Remember to choose Sokol Testnet in Nifty Wallet before proceeding.
+Choose Sokol Testnet in your wallet before proceeding.
 {{</note>}}
 
 Read more on the [comparison of xDai and POA Network](https://www.xdaichain.com/about-xdai/comparisons/poa) if you really want to use xDai to understand the risks. For POA there are no risks involved, we operate on the Testnet only.
