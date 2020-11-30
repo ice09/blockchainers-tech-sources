@@ -161,7 +161,7 @@ code {
 }
 .cmd code {
     color: #fefefe;
-    white-space: nowrap;
+    white-space: pre-wrap;
 }
 .cmd code::before {
     content: '$';
@@ -367,6 +367,7 @@ caption {
 .patterns {
     overflow: auto;
     margin-top: 1.5rem;
+    min-width: max-content;
 }
 .patterns * {
     margin-top: 0;
@@ -382,7 +383,6 @@ caption {
     list-style: none;
 }
 .patterns li + li {
-    margin-top: 0.75rem;
 }
 .patterns ul ul {
     margin-left: 0.75rem;
@@ -394,6 +394,8 @@ caption {
     align-items: baseline;
     font-weight: bold;
     padding: 0 1rem;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 .pattern a:focus {
     outline: none;
@@ -407,8 +409,6 @@ caption {
   background-color: #111;
   clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
   color: #fefefe;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
 }
 
 /* Menu button */
@@ -537,17 +537,22 @@ caption {
 
 /* Figures */
 figure {
-    text-align: left;
+    text-align: center;
 }
 figcaption {
     font-size: 0.85rem;
     font-style: italic;
-    margin-top: 0.1rem;
+    margin-top: 0.5rem;
 }
 main {
-    display: left;
+    display: block;
     counter-reset: fig;
     min-height: 100vh;
+}
+figcaption::before {
+    counter-increment: fig;
+    content: 'Figure ' counter(fig) ':\0020';
+    font-weight: bold;
 }
 
 /* Code blocks */

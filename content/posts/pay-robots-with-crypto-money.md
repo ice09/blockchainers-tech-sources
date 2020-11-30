@@ -57,6 +57,8 @@ Read more on the [comparison of xDai and POA Network](https://www.xdaichain.com/
 * You can now transfer SPOA to any Ethereum address. 
   * The receiver however first has to connect to Sokol to see the amount.
 
+There is a more detailed description of the process [on the POA site](https://www.poa.network/for-developers/getting-tokens-for-tests/sokol-testnet-faucet).
+
 As you see, transferring money between parties is incredibly easy and fast. Pay with xDai, receive xDai and if necessary, convert it to DAI (via the DAI-xDai-Bridge) and even back to USD/EUR eg. via CEX like Kraken.
 
 # Human to Machine Payments with Digital Dollars
@@ -96,7 +98,7 @@ Any half-assed software developer can see that this is not rocket science to use
 
 ### Next Step: crypyAPI. Crypto Payments APIs.
 
-The demo should give you an impression on what is possible. What we actually want to have this runnable on any device which runs Java:
+The demo should give you an impression on what is possible. What we actually want to have this runnable on any device, for any cryptocurrency, and useable as easy as:
 
 ```java
 @Payable(currency=EUR, equivalentValue=0.1, accepted={DAI, LIBRA})

@@ -50,35 +50,35 @@
   })
 }());
 
-/* Add "link here" links to <h2> headings */
-(function () {
-  var headings = document.querySelectorAll('main > h2');
 
-  Array.prototype.forEach.call(headings, function (heading) {
-    var id = heading.getAttribute('id');
+  /* Add "link here" links to <h2> headings */
+  (function () {
+    var headings = document.querySelectorAll('main > h2');
 
-    if (id) {
-      var newHeading = heading.cloneNode(true);
-      newHeading.setAttribute('tabindex', '-1');
+    Array.prototype.forEach.call(headings, function (heading) {
+      var id = heading.getAttribute('id');
 
-      var container = document.createElement('div');
-      container.setAttribute('class', 'h2-container');
-      container.appendChild(newHeading);
+      if (id) {
+        var newHeading = heading.cloneNode(true);
+        newHeading.setAttribute('tabindex', '-1');
 
-      heading.parentNode.insertBefore(container, heading);
+        var container = document.createElement('div');
+        container.setAttribute('class', 'h2-container');
+        container.appendChild(newHeading);
 
-      var link = document.createElement('a');
-      link.setAttribute('href', '#' + id);
-      var headingText = heading.textContent;
-      link.setAttribute('aria-label', 'This ' + headingText + ' section');
-      link.innerHTML = '<svg aria-hidden="true" class="link-icon" viewBox="0 0 50 50" focusable="false"> <use xlink:href="#link"></use> </svg>';
+        heading.parentNode.insertBefore(container, heading);
 
-      container.appendChild(link);
+        var link = document.createElement('a');
+        link.setAttribute('href', '#' + id);
+        link.innerHTML = '<svg aria-hidden="true" class="link-icon" viewBox="0 0 50 50" focusable="false"> <use xlink:href="#link"></use> </svg>';
 
-      heading.parentNode.removeChild(heading);
-    }
-  })
-}());
+        container.appendChild(link);
+
+        heading.parentNode.removeChild(heading);
+      }
+    })
+  }());
+
 
 /* Enable scrolling by keyboard of code samples */
 (function () {
@@ -97,37 +97,54 @@
 
 /* Switch and persist theme */
 (function () {
-  function CSSSupported (property, value) {
-    var prop = property + ':',
-        el = document.createElement('test'),
-        mStyle = el.style;
-    el.style.cssText = prop + value;
-    return mStyle[property];
-  }
-
   var checkbox = document.getElementById('themer');
-  var inverter = document.getElementById('inverter');
 
-  if (!CSSSupported('filter', 'invert(100%)')) {
-    checkbox.parentNode.hidden = true;
-    return;
+  function persistTheme(val) {
+    localStorage.setItem('darkTheme', val);
   }
 
-  function darkTheme(media) {
-    inverter.setAttribute('media', media);
-    inverter.textContent = inverter.textContent.trim();
-    localStorage.setItem('darkTheme', media);
+  function applyDarkTheme() {
+    var rules = [
+      '.intro-and-nav, .main-and-footer { filter: invert(100%); }',
+      '* { background-color: inherit; }',
+      'img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%); }'
+    ];
+    rules.forEach(function(rule) {
+      document.styleSheets[0].insertRule(rule);
+    })
+  }
+
+  function clearDarkTheme() {
+    for (let i = 0; i < document.styleSheets[0].cssRules.length; i++) {
+      document.styleSheets[0].deleteRule(i);
+    }
   }
 
   checkbox.addEventListener('change', function () {
-    darkTheme(this.checked ? 'screen' : 'none');
-  });
-
-  window.addEventListener('DOMContentLoaded', function () {
-    if ('filter' in document.body.style) {
-      if (localStorage.getItem('darkTheme') === 'screen') {
-        checkbox.click();
-      }
+    if (this.checked) {
+      applyDarkTheme();
+      persistTheme('true');
+    } else {
+      clearDarkTheme();
+      persistTheme('false');
     }
   });
+
+  function showTheme() {
+    if (localStorage.getItem('darkTheme') === 'true') {
+      applyDarkTheme();
+      checkbox.checked = true;
+    }
+  }
+
+  function showContent() {
+    document.body.style.visibility = 'visible';
+    document.body.style.opacity = 1;
+  }
+
+  window.addEventListener('DOMContentLoaded', function () {
+    showTheme();
+    showContent();
+  });
+
 }());
