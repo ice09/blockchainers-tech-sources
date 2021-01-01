@@ -1,7 +1,7 @@
 ---
 title: "Circles Trusthub for Verified Twitter Accounts"
 date: 2020-12-16T10:00:04+01:00
-draft: true
+draft: false
 ---
 
 {{<blockquote author="Warren Bennis">}}
@@ -60,10 +60,29 @@ In the overview below you see the communication between the several components, 
 </figure>
 
 1. Make sure you cannot pay trusthubmerchant with your Circles (CRC).
-2. Trust the Twitter Trusthub.
-3. Tweet the signed messaged.
-4. Wait for mutual trust by Trusthub.
-5. Pay trusthubmerchant via Trusthub.
+2. Tweet the signed messaged for Twitter Trusthub Smart Contract to trust User's Circle Gnosis Safe.
+3. Wait for trust by Trusthub.
+4. Pay trusthubmerchant via Trusthub with Trusthub Circles.
+
+#### Verify no Payment Route exists
+
+<figure >
+    <img src="/images/No_Trustpath.png"/>
+    <figcaption>Sending from trustcustomer to trustmerchant is not possible as there is no Trust Path.</figcaption> 
+</figure>
+
+#### Trust the Twitter Trusthub Smart Contract
+
+<figure >
+    <img src="/images/Trust_TwitterTrusthub.png"/>
+    <figcaption>Trust the Twitter Trusthub Smart Contract.</figcaption> 
+</figure>
+
+
+<figure >
+    <img src="/images/Trusthub-Transitive-Payments.png"/>
+    <figcaption>Create Trust Path from Customer to Merchant.</figcaption> 
+</figure>
 
 ## POAP as Trust Source
 
