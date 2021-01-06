@@ -96,7 +96,7 @@ The development requires Java 11 (+Maven), some Spring Boot knowledge and intern
 
 * All sources and Demo instructions for this blog post: https://github.com/ice09/crypyapi-http-demo
 
-### Next Step: crypyAPI. Crypto Payments APIs.
+### Next Step: crypyAPI. Crypto Payable APIs.
 
 The demo should give you an impression on what is possible. What we actually want to have this runnable on any device, for any cryptocurrency, and useable as easy as:
 
