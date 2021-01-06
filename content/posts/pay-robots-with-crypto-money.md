@@ -70,7 +70,11 @@ With crypto human-to-machine payments, it's almost as easy as with analog human-
 <figcaption>Paying for services: Overview of Service Request and Payment.</figcaption>
 </figure>
 
-The crucial transaction step is the correlation of the service request and the payment by the client. This step must prevent double spents, sybil attacks, and other means of fraud. For this, we have to make sure that the payment was executed for exactly one request by the client who now requests the service. This is complex as there is no connection between the technical payment provider (the xDai Blockchain) and the service provider (the HTTP response). This connection has to be established securely and easy by correlating the payment and the service request.
+The crucial transaction step is the correlation of the service request and the payment by the client. This step must prevent double spents, sybil attacks, and other means of fraud. For this, we have to make sure that the payment was executed for exactly one request by the client who now requests the service. 
+
+This is complex as there is no connection between the technical payment provider (the xDai Blockchain) and the service provider (the HTTP communication). 
+
+This connection has to be established securely and easily by correlating the payment and the service request.
 
 ## Correlation with unique transaction identifiers, digital signatures and sender addresses
 
