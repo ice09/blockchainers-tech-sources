@@ -92,7 +92,7 @@ The crucial transaction step is the correlation of the service request and the p
 
 Yes it does, we prepared a very simple demo for paying for (really cheap) Chuck Norris jokes which requires manual transaction identifier signing to correlate the payment and the joke request.
 
-Any half-assed software developer can see that this is not rocket science to use. The development requires Java 11 (+Maven), some Spring Boot knowledge and internet access. The demo requires Docker.
+The development requires Java 11 (+Maven), some Spring Boot knowledge and internet access. The demo requires Docker.
 
 * All sources and Demo instructions for this blog post: https://github.com/ice09/crypyapi-http-demo
 
@@ -107,7 +107,12 @@ public byte[] createPicture() {
 }
 ```
 
-So you take your Endpoints/REST Controllers/Services, add some annotations (we are in Java/Spring Boot environment here) and enjoy earning money. This can run everywhere, on-premise, in a private cloud, in a public cloud.  
+You can find running prototypes (for xDai/POA, but easily extendable to Stellar, Diem, and all Chains allowing for extra data in their transactions) here:
+
+* Payment Receiver: https://github.com/ice09/crypyapi-receiver
+* Payment Sender: https://github.com/ice09/crypyapi-sender
+
+So you take your Services, add some annotations (we are in Java/Spring Boot environment here) and enjoy earning money. This can run everywhere, on-premise, in a private cloud, in a public cloud.  
 No credentials, no credit cards, no bank accounts, just a plain 32 byte private key storing the money.
 
 *Make money from your services, everywhere.*
