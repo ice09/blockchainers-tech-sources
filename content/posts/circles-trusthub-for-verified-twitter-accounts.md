@@ -1,7 +1,7 @@
 ---
 title: "Circles Trusthub for Verified Twitter Accounts"
 date: 2020-12-16T10:00:04+01:00
-draft: true
+draft: false
 ---
 
 {{<blockquote author="Warren Bennis">}}
@@ -84,6 +84,8 @@ In the overview below you see the communication between the several components, 
     <figcaption>Create Trust Path from Customer to Merchant.</figcaption> 
 </figure>
 
-## POAP as Trust Source
+#### Verify payments after Trusthub trusted Customer account
+
+#### WIP: POAP as Trust Source
 
 https://thegraph.com/explorer/subgraph/amxx/poap
