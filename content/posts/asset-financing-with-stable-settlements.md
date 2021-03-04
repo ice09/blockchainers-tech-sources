@@ -1,7 +1,7 @@
 ---
 title: "Asset Financing with Smart Contract-based Stable Settlements"
 date: 2021-01-26T15:33:33+01:00
-draft: true
+draft: false
 markup:
   goldmark:
     renderer:
@@ -24,21 +24,21 @@ Accounts receivable represents money owed by entities to the firm on the sale of
 
 <figure>
 <img src="/images/invoice_contract_factoring_simple.png">
-<figcaption>Accounts Receivable Factoring (simplified)</figcaption>
+<figcaption>Accounts Receivable Purchase (simplified)</figcaption>
 </figure>
 
-For our example we take accounts receivable for asset financing and a simple Factoring transaction. Later samples include a Reverse Factoring transaction. Reverse Factoring is more complex than simple Factoring, but establishes higher trust levels as the issuer of the "asset" (which is now a "receiver-confirmed" invoice) is not the invoice issuer, but the invoice receiver who confirms that she will pay the invoice, for example by including it in payment runs in her ERP system.
+For our example we take accounts receivable for asset financing and a simple Accounts Receivable Purchase transaction. Later samples include a Reverse Factoring transaction. Reverse Factoring is more complex than simple Factoring, but eliminates an important risk, i.e. the so-called verity risk of the Creditor, as we are dealing with a "receiver(Debtor)-confirmed" invoice, ie. not the invoice issuer, but the invoice receiver confirms that she will pay the invoice amount at maturity of the invoice, for example by including it in payment runs in her ERP system.
 
 ### Accounts Receivable Factoring Process Flow
 
-1. The Creditor ships products or services to the Debtor and submits an invoice (over 101 USD) with typical payment terms (eg. NET-30 for payment in 30 days)
-2. The Creditor prefers to have 100 USD (1% discount) now instead of 101 USD in 30 days and sends the invoice copy to a Factor
-3. The Factor pays 100 USD to the Creditor
-4. The Debtor pays 101 USD on the original due date (30 days later) to the Factor, the Factor made a profit of 1%
+1. The Creditor ships products or services to the Debtor and submits an invoice (over USD 101) with typical payment terms (eg. NET-30 for payment in 30 days)
+2. The Creditor prefers to have USD 100 (1% discount) now instead of USD 101 in 30 days and sends the invoice copy to a Investor
+3. The Investor purchases the invoice and pays the purchase price amounting to USD 100 to the Creditor/Supplier
+4. The Debtor pays USD 101 on the original due date (30 days later) to the Investor, the Investor generated a gross profit of 1%
 
-This process flow is highly simplified, but you get the point: the Factor finances the invoice and gets a fee for this.
+This process flow is highly simplified, but you get the point: the Investor purchases the invoice and receives an interest for this.
 
-Now in real life, this gets messy easily as all the parties probably have different bank accounts. Also the Customer must know that she has to transfer the money *not* to the Creditor, but to the Factor - or the Factor must have the allowance to debit the Creditor bank account and accept a debt default risk.
+Now in real life, this gets messy easily as all the parties probably have different bank accounts. Also the Customer must know that she has to transfer the money *not* to the Creditor, but to the Investor - or the Investor must have the allowance to debit the Creditor bank account and accept a debt default risk.
 
 ## Enter Stablecoin Payments
 
@@ -59,7 +59,7 @@ We will go through the steps above in the Solidity code. _The complete Smart Con
 
 1. Creditor submits invoice to Debtor and registers invoice for financing
 
-This step equals a registration of a uniquely identifiable asset in the Smart Contract that can then be factored.
+This step equals a registration of a uniquely identifiable asset in the Smart Contract that can then be purchased.
 
 <pre style="font-size:60%;font-family:monospace">
 function registerAssetForFinancing(bytes32 asset, uint256 amount, uint8 discount) public {
@@ -84,9 +84,9 @@ function registerAssetForFinancing(bytes32 asset, uint256 amount, uint8 discount
 }
 </pre>
 
-2. Factor pays Creditor _and_ Creditor gets transferred discounted amount (atomic transaction)
+2. Investor pays Creditor _and_ Creditor gets transferred discounted amount (atomic transaction)
 
-The Factor can now send the native currency of the Chain to the Smart Contract and call finance in the same, atomic transaction.
+The Investor can now send the native currency of the Chain to the Smart Contract and call finance in the same, atomic transaction.
 
 <pre style="font-size:60%;font-family:monospace">
 function financeAsset(bytes32 asset) public payable {
@@ -105,7 +105,7 @@ function financeAsset(bytes32 asset) public payable {
 }
 </pre>
 
-3. Debtor pays to the Smart Contract on original due date _and_ Factor gets transferred the full invoice amount of the Smart Contract (atomic transaction)
+3. Debtor pays to the Smart Contract on original due date _and_ the Investor gets transferred the full invoice amount of the Smart Contract (atomic transaction)
 
 <pre style="font-size:60%;font-family:monospace">
 function settleFinancedAsset(bytes32 asset) public payable {
@@ -128,7 +128,7 @@ function settleFinancedAsset(bytes32 asset) public payable {
 
 ## Recap: Fully Automated Bankless Asset Financing
 
-This post shows how to do a Accounts Receivable Financing fully automated, bankless and permissionless. What's the catch? 
+This post shows how to do a Accounts Receivable Purchase fully automated, bankless and permissionless. What's the catch? 
 
 The xDai Chain has a "market cap" of $1.4 mio. DAI and $14 mio. ERC-20/NFT. This is not really much, especially for B2B applications. The Chain's operation mode is not permission-less, there are well-known validators which [are listed](https://www.xdaichain.com/about-xdai/news-and-information/current-xdai-validators), but this is far away from a permission-less, economic-incentivized, established PoW chain like Ethereum.
 
