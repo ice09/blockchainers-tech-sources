@@ -33,7 +33,7 @@ As a Service or API, only the Group Currency Token (GCT) address has to be known
 
 Yes it does, we prepared a simple demo for paying for (really cheap) Chuck Norris jokes with a Group Currency Token. The demo runs on Hardhat only, but could run on xDai with Circles UBI as well. The `OrgaHub`, which is necessary for transitive minting, is not deployed on the Mainnet for now.  
 
-* All sources and Demo instructions for this blog post: https://github.com/ice09/paid-apis
+* All sources and Demo instructions for this blog post: https://github.com/ice09/token-paid-services
 
 ### Next Step: crypyAPI. Crypto Payable APIs.
 
