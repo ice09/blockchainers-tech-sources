@@ -37,10 +37,10 @@ Yes it does, we prepared a demo for paying for (really cheap) Chuck Norris jokes
 
 ### Next Step: crypyAPI. Crypto Payable APIs.
 
-The demo should give you an impression on what is possible. What we actually want to have this runnable on any device, for any cryptocurrency, and useable as easy as:
+The demo should give you an impression on what is possible. What we actually want to have this runnable on any device, for any cryptocurrency, and useable as easy as (with acceptance of `DAI` and `GroupCurrencyToken_BEER` in equivalent values of 0.1 EUR):
 
 ```java
-@Payable(currency=EUR, equivalentValue=0.1, accepted={DAI, XDAI, GCT_BEER})
+@Payable(currency=EUR, equivalentValue=0.1, accepted={DAI, GCT_BEER})
 public byte[] createPicture() {
     return pictureService.create();
 }
