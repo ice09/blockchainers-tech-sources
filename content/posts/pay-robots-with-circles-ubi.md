@@ -22,10 +22,12 @@ Circles UBI are ERC-20 Tokens which are individualized. So, each user has her ow
    <figcaption>Individual Circles Tokens (CRC) vs. Group Currencies</figcaption>
 </figure>
 
-
 As a Service or API, only the Group Currency Token (GCT) address has to be known. If a user has a path to the Group Currency contract, she can swap her own CRC for the Group Currency Token Owner (GCTO).
 
-
+<figure>
+   <img src="https://drive.google.com/uc?export=view&id=15Mas10wGK6JsEMpPxWS0RxOPZypWvqPO"/>
+   <figcaption>Call Dequence for Circles UBI GroupCurrency Payments</figcaption>
+</figure>
 
 ## But does it work?
 
