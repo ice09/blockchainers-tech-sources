@@ -31,7 +31,7 @@ As a Service or API, only the Group Currency Token (GCT) address has to be known
 
 ## But does it work?
 
-Yes it does, we prepared a simple demo for paying for (really cheap) Chuck Norris jokes with a Group Currency Token. The demo runs on Hardhat only, but could run on xDai with Circles UBI as well. The `OrgaHub`, which is necessary for transitive minting, is not deployed on the Mainnet for now.  
+Yes it does, we prepared a demo for paying for (really cheap) Chuck Norris jokes with a Group Currency Token. The demo currently runs on Hardhat, but could run on xDai with Circles UBI as well. The `OrgaHub`, which is necessary for transitive minting, is not deployed on the Mainnet for now.  
 
 * All sources and Demo instructions for this blog post: https://github.com/ice09/token-paid-services
 
@@ -40,13 +40,13 @@ Yes it does, we prepared a simple demo for paying for (really cheap) Chuck Norri
 The demo should give you an impression on what is possible. What we actually want to have this runnable on any device, for any cryptocurrency, and useable as easy as:
 
 ```java
-@Payable(currency=EUR, equivalentValue=0.1, accepted={DAI, CRC})
+@Payable(currency=EUR, equivalentValue=0.1, accepted={DAI, XDAI, GCT_BEER})
 public byte[] createPicture() {
     return pictureService.create();
 }
 ```
 
 So you take your Services, add some annotations (we are in Java/Spring Boot environment here) and enjoy earning money. This can run everywhere, on-premise, in a private cloud, in a public cloud.  
-No credentials, no credit cards, no bank accounts, just a plain 32 byte private key storing the money.
+No credentials, no credit cards, no bank accounts, just a plain 32 byte private key storing the money (or a Gnosis Safe for Circles UBI).
 
 *Make money from your services, everywhere.*
