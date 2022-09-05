@@ -14,7 +14,7 @@ Was einmal gedacht wurde, kann nicht mehr zurückgenommen werden.
 </figure>
 
 [Pearson announced it wants to use NFTs](https://www.theverge.com/2022/8/3/23290335/pearson-textbook-publisher-nft-blockchain-secondhand-ebook-sales) for earning on all trades of a book and the Blockchain-crowd did not like it.
-There are many good reasons against this kind of money harvesting, but in this post, we ignore them and just want to understand how to implement this feature (on an EVM chain with a native Stable coin, like Gnosis Chain).
+There are many good reasons against this kind of money harvesting, but in this post, we ignore them and just want to understand how to implement this feature (on an EVM chain with a native Stablecoin currency, like [Gnosis Chain](https://www.gnosischain.com/)).
 
 <figure>
 <img src="https://i.imgur.com/XBSeMBy.png" size=200% border=0 />
