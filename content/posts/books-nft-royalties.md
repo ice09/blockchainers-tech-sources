@@ -1,5 +1,5 @@
 ---
-title: "Books as NFT with Royalties on Stablecoin Chains"
+title: "Books as NFTs with Royalties on Stablecoin Chains"
 date: 2022-08-27
 draft: false
 ---
@@ -90,7 +90,7 @@ function safeTransferFrom(
   bytes memory data
 ) public virtual override {
   require(_isApprovedOrOwner(_msgSender(), tokenId), "ERC721: caller is not token owner or approved");
-  require(_payRoyaltyFee(), "ERC721: Royalty Fee was not paid");
+  _payRoyaltyFee();
   _safeTransfer(from, to, tokenId, data);
 }
 
