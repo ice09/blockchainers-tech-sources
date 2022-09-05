@@ -23,9 +23,9 @@ There are many good reasons against this kind of money harvesting, but in this p
 
 ### Algorithmically Ensured Royalty Payments
 
-Why are Smart Contracts a great solution for paying Royalties? Because the author or publisher can make sure that payments will be executed, _without having to trust the buyer or the seller_.
+Why are Smart Contracts a great solution for paying royalties? Because the author or publisher can make sure that payments will be executed, _without having to trust the buyer or the seller_.
 
-With a physical book, if the seller (Sally) sells the book to the buyer (Bob), the author has no way to verify that Royalties are paid.
+With a physical book, if the seller (Sally) sells the book to the buyer (Bob), the author has no way to verify that royalties are paid.
 
 With Smart Contracts, the author can _prohibit_ the transfer of the NFT from Sally to Bob if the royalties are not paid.
 
@@ -107,7 +107,3 @@ Now the `safeTransferFrom` function will revert if the transaction did not inclu
 With this simple implementation, we can make sure that the owner of an NFT cannot change if the royalty fee was not paid without having to trust anyone, neither buyer or seller or intermediaries on behalf - the payment cannot be circumvented as it is "hard wired" into the code of the NFT Smart Contract.
 
 These are all implementation steps to implement this feature in a Stablecoin chain. For a non-Stablecoin chain, Token transfers would have to be used, which increases the complexity a bit, though the logic would stay exactly the same.
-
-
-
-
