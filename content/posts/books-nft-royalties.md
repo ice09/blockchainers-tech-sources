@@ -95,7 +95,7 @@ function safeTransferFrom(
 }
 
 function _payRoyaltyFee() internal {
-  require(msg.value > _royaltyFee, "Royalty Fee is not included in transaction");
+  require(msg.value >= _royaltyFee, "Royalty Fee is not included in transaction");
   _royaltyReceiver.transfer(_royaltyFee);
 }
 ```
