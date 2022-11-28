@@ -4,8 +4,6 @@ date: 2022-11-28
 draft: false
 ---
 
-# Casting Smart Contracts with Foundry
-
 {{<blockquote author="Luis J. Rodriguez">}}
 I worked in a steel mill, I worked in a foundry, I worked in a paper mill, I worked in a chemical refinery, construction, I did all that. It was great work, it was good. I learned welding, mechanic, carpentry, but it saved me from going back to prison because that's helpful. It's really sad because those jobs are gone.
 {{</blockquote>}}
