@@ -15,7 +15,8 @@ There are many great introductions to Foundry and good [comparisons with Truffle
 In this post, we will refactor a smart contract from an existing Truffle repository to a brand-new Foundry repository and on the way using some cool features: _blazingly fast builds, EVM-testing, and Mainnet forking_.
 
 <figure>
-<img src="https://i.imgur.com/ZwwdQEih.png" border=0 />
+<img src="https://i.imgur.com/fuFkFXR.png" border=0 />
+    <figcaption>Circles UBI Payments with and without Group Currencies</figcaption>
 </figure>
 
 ## Motivation
