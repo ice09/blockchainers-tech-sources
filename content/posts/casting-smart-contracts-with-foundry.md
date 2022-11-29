@@ -12,7 +12,7 @@ I worked in a steel mill, I worked in a foundry, I worked in a paper mill, I wor
 
 There are many great introductions to Foundry and good [comparisons with Truffle and Hardhat](https://www.youtube.com/watch?v=d6Uvt0u6FQc).
 
-In this post, we will refactor a [Circles UBI](https://joincircles.net/) [Group Currency Solidity smart contract](https://github.com/ice09/circles-group-currency-token) from an existing Truffle repository to a brand-new Foundry repository and on the way using some cool features: _blazingly fast builds, EVM-testing, and Mainnet forking_.
+In this post, we will refactor a [Circles UBI](https://joincircles.net/) [Group Currency Solidity smart contract](https://github.com/ice09/circles-group-currency-token) from an existing Truffle repository to a brand-new Foundry repository and on the way use some cool Foundry features: _blazingly fast builds, EVM-testing, and Mainnet forking_.
 
 <figure>
 <img src="https://i.imgur.com/fuFkFXR.png" border=0 />
