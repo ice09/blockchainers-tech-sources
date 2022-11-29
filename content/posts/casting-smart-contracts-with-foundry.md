@@ -16,12 +16,12 @@ In this post, we will refactor a smart contract from an existing Truffle reposit
 
 <figure>
 <img src="https://i.imgur.com/fuFkFXR.png" border=0 />
-    <figcaption>Circles UBI Payments with and without Group Currencies</figcaption>
+    <figcaption>[Circles UBI](https://joincircles.net/) Payments with and without Group Currencies</figcaption>
 </figure>
 
 ## Motivation
 
-When development started on the `GroupCurrencyToken` smart contracts, we created a simple prototype first. This prototype was only runnable in the context of Circles UBI, ie. with access to an existing `Hub` smart contract.
+When development started on the `GroupCurrencyToken` smart contracts, we created a simple prototype first. This prototype was only runnable in the context of [Circles UBI](https://joincircles.net/), ie. with access to an existing `Hub` smart contract.
 
 Even on creation a dependency on `Hub` does exist, as the function `organizationSignup` is called.
 
