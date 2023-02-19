@@ -45,14 +45,12 @@ To complete the walk-through, you will use multiple, completely unrelated tech s
 
 ### ⚙️ Step-by-Step
 
-You can use the modules README will help with the sequence of setup steps.
-
-At the end, you should be able to
+You can use the modules README will help with the sequence of setup steps:
 
 * Deploy the Switch contract on your local chain
 * Listen to the Events of the Switch contract
-* Transact with the contract to turn the switch
-* See the queued messages with the Event payload in RabbitMQ
+* Transact with the contract to "turn the switch"
+* See the queued messages with the Event payload in the RabbitMQ Admin Dashboard
 
 #### 1. Deploy the Switch contract on your local chain
 
