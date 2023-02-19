@@ -64,7 +64,7 @@ At the end, you should be able to
 
 #### 3. Transact with the contract to turn the switch
 
-* Use `cast` to call the function `turnSwitch(1)` on the deployed smart contract. See step ... in [Switch Dumb Contract README](https://github.com/ice09/dlt-event-monitor/blob/main/dumb-contract/README.md)
+* Use `cast` to call the function `turnSwitch(1)` on the deployed smart contract. See the step in [Switch Dumb Contract README](https://github.com/ice09/dlt-event-monitor/blob/main/dumb-contract/README.md#get-deployed-contract-address)
 
 #### 4. See the queued messages with the Event payload in RabbitMQ
 
